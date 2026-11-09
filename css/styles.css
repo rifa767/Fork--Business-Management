@@ -87,23 +87,18 @@ a{text-decoration:none;color:inherit}
 :root{--notch:62px}
 
 /* Panel 1 : top corners raised (shoulders) + recessed centre,
-            bottom corners recessed + protruding centre            */
+            bottom corners recessed + protruding centre.
+   SVG clip-path gives rounded/curved corners (see <svg> at end of index.html) */
 .panel-1{
-  clip-path:polygon(
-    0 0, 13% 0, 15% var(--notch), 85% var(--notch), 87% 0, 100% 0,
-    100% calc(100% - var(--notch)), 76% calc(100% - var(--notch)), 74% 100%,
-    26% 100%, 24% calc(100% - var(--notch)), 0 calc(100% - var(--notch))
-  );
+  -webkit-clip-path:url(#panel1-clip);
+          clip-path:url(#panel1-clip);
 }
 /* Panel 2 : corners recessed on all four sides + raised centre
             (interlocks with panel 1 across the dark band)         */
 .panel-2{
   margin-top:-1px;
-  clip-path:polygon(
-    0 var(--notch), 24% var(--notch), 26% 0, 74% 0, 76% var(--notch), 100% var(--notch),
-    100% calc(100% - var(--notch)), 76% calc(100% - var(--notch)), 74% 100%,
-    26% 100%, 24% calc(100% - var(--notch)), 0 calc(100% - var(--notch))
-  );
+  -webkit-clip-path:url(#panel2-clip);
+          clip-path:url(#panel2-clip);
 }
 
 /* Ecosystem */
