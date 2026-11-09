@@ -83,22 +83,27 @@ a{text-decoration:none;color:inherit}
 /* =================== LIGHT PANELS (angular "baka" notched shape) =================== */
 .panel-light{background:#fff;color:#000;padding:130px 0;position:relative;z-index:3}
 
-/* Clip-path proportions taken from the actual Figma "Subtract" path
-   (assets/bg-element.svg). The diagonals span ~5.4% of the panel's
-   width, not the near-vertical 2% we had before. Notch depths differ
-   per panel to match each panel's own aspect ratio in the design. */
+/* notch sizing */
+:root{--notch:62px}
 
-/* Panel 1 : top shoulders + central dip, bottom has outer-corner
-             diagonal cuts and the centre protrudes to full height.
-             Notch ≈ 5% of its own (taller) height. */
+/* Panel 1 : top corners raised (shoulders) + recessed centre,
+            bottom corners recessed + protruding centre            */
 .panel-1{
-  -webkit-clip-path:url(#panel1-clip);
-          clip-path:url(#panel1-clip);
+  clip-path:polygon(
+    0 0, 13% 0, 15% var(--notch), 85% var(--notch), 87% 0, 100% 0,
+    100% calc(100% - var(--notch)), 76% calc(100% - var(--notch)), 74% 100%,
+    26% 100%, 24% calc(100% - var(--notch)), 0 calc(100% - var(--notch))
+  );
 }
+/* Panel 2 : corners recessed on all four sides + raised centre
+            (interlocks with panel 1 across the dark band)         */
 .panel-2{
   margin-top:-1px;
-  -webkit-clip-path:url(#panel2-clip);
-          clip-path:url(#panel2-clip);
+  clip-path:polygon(
+    0 var(--notch), 24% var(--notch), 26% 0, 74% 0, 76% var(--notch), 100% var(--notch),
+    100% calc(100% - var(--notch)), 76% calc(100% - var(--notch)), 74% 100%,
+    26% 100%, 24% calc(100% - var(--notch)), 0 calc(100% - var(--notch))
+  );
 }
 
 /* Ecosystem */
@@ -302,6 +307,7 @@ a{text-decoration:none;color:inherit}
   .ways-cta{grid-column:1 / -1}
 }
 @media (max-width:900px){
+  :root{--notch:40px}
   .panel-light{padding:90px 0}
   .nav-links{display:none}
   .eco-grid{grid-template-columns:1fr}
