@@ -376,6 +376,45 @@
   </div>
 </footer>
 
+<!-- Rounded (smooth curved) clip-paths for the white panels.
+     The angular diagonals of the original polygon are replaced by
+     cubic-Bezier S-curves, so each notch flows softly like the Figma
+     reference ("halka gol"). objectBoundingBox keeps it responsive. -->
+<svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="panel1-clip" clipPathUnits="objectBoundingBox">
+      <path d="M 0 0
+        L 0.13 0
+        C 0.14 0, 0.14 0.05, 0.15 0.05
+        L 0.85 0.05
+        C 0.86 0.05, 0.86 0, 0.87 0
+        L 1 0
+        L 1 0.95
+        L 0.76 0.95
+        C 0.75 0.95, 0.75 1, 0.74 1
+        L 0.26 1
+        C 0.25 1, 0.25 0.95, 0.24 0.95
+        L 0 0.95
+        Z"/>
+    </clipPath>
+    <clipPath id="panel2-clip" clipPathUnits="objectBoundingBox">
+      <path d="M 0 0.075
+        L 0.24 0.075
+        C 0.25 0.075, 0.25 0, 0.26 0
+        L 0.74 0
+        C 0.75 0, 0.75 0.075, 0.76 0.075
+        L 1 0.075
+        L 1 0.925
+        L 0.76 0.925
+        C 0.75 0.925, 0.75 1, 0.74 1
+        L 0.26 1
+        C 0.25 1, 0.25 0.925, 0.24 0.925
+        L 0 0.925
+        Z"/>
+    </clipPath>
+  </defs>
+</svg>
+
 <!-- EmailJS: sends a welcome email to WHOEVER types their address (dynamic recipient, works with Live Server, no backend) -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
 <script src="js/email-config.js"></script>
