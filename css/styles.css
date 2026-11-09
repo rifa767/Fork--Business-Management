@@ -92,32 +92,13 @@ a{text-decoration:none;color:inherit}
              diagonal cuts and the centre protrudes to full height.
              Notch ≈ 5% of its own (taller) height. */
 .panel-1{
-  -webkit-clip-path:polygon(
-    0 0, 10% 0, 20% 5%, 80% 5%, 90% 0, 100% 0,
-    100% 95%, 80% 95%, 70% 100%,
-    30% 100%, 20% 95%, 0 95%
-  );
-          clip-path:polygon(
-    0 0, 10% 0, 20% 5%, 80% 5%, 90% 0, 100% 0,
-    100% 95%, 80% 95%, 70% 100%,
-    30% 100%, 20% 95%, 0 95%
-  );
+  -webkit-clip-path:url(#panel1-clip);
+          clip-path:url(#panel1-clip);
 }
-
-/* Panel 2 : shelves + central bumps top AND bottom (shorter panel,
-             so the notch takes a larger share of its height ≈ 7.5%). */
 .panel-2{
   margin-top:-1px;
-  -webkit-clip-path:polygon(
-    0 7.5%, 20% 7.5%, 30% 0, 70% 0, 80% 7.5%, 100% 7.5%,
-    100% 92.5%, 80% 92.5%, 70% 100%,
-    30% 100%, 20% 92.5%, 0 92.5%
-  );
-          clip-path:polygon(
-    0 7.5%, 20% 7.5%, 30% 0, 70% 0, 80% 7.5%, 100% 7.5%,
-    100% 92.5%, 80% 92.5%, 70% 100%,
-    30% 100%, 20% 92.5%, 0 92.5%
-  );
+  -webkit-clip-path:url(#panel2-clip);
+          clip-path:url(#panel2-clip);
 }
 
 /* Ecosystem */
