@@ -83,40 +83,40 @@ a{text-decoration:none;color:inherit}
 /* =================== LIGHT PANELS (angular "baka" notched shape) =================== */
 .panel-light{background:#fff;color:#000;padding:130px 0;position:relative;z-index:3}
 
-/* notch sizing */
-:root{--notch:62px}
-
-/* Shapes match the Figma: angular/diagonal notch transitions
-   (Figma uses triangular "Subtract" vectors on a rounded rectangle). */
+/* Clip-path proportions taken from the actual Figma "Subtract" path
+   (assets/bg-element.svg). The diagonals span ~5.4% of the panel's
+   width, not the near-vertical 2% we had before. Notch depths differ
+   per panel to match each panel's own aspect ratio in the design. */
 
 /* Panel 1 : top shoulders + central dip, bottom has outer-corner
-             diagonal cuts and the centre protrudes to full height. */
+             diagonal cuts and the centre protrudes to full height.
+             Notch ≈ 5% of its own (taller) height. */
 .panel-1{
   -webkit-clip-path:polygon(
-    0 0, 13% 0, 15% var(--notch), 85% var(--notch), 87% 0, 100% 0,
-    100% calc(100% - var(--notch)), 76% calc(100% - var(--notch)), 74% 100%,
-    26% 100%, 24% calc(100% - var(--notch)), 0 calc(100% - var(--notch))
+    0 0, 12.3% 0, 17.7% 5%, 82.3% 5%, 87.7% 0, 100% 0,
+    100% 95%, 78.7% 95%, 73.3% 100%,
+    26.7% 100%, 21.3% 95%, 0 95%
   );
           clip-path:polygon(
-    0 0, 13% 0, 15% var(--notch), 85% var(--notch), 87% 0, 100% 0,
-    100% calc(100% - var(--notch)), 76% calc(100% - var(--notch)), 74% 100%,
-    26% 100%, 24% calc(100% - var(--notch)), 0 calc(100% - var(--notch))
+    0 0, 12.3% 0, 17.7% 5%, 82.3% 5%, 87.7% 0, 100% 0,
+    100% 95%, 78.7% 95%, 73.3% 100%,
+    26.7% 100%, 21.3% 95%, 0 95%
   );
 }
 
-/* Panel 2 : all four outer corners cut diagonally, with central
-             protrusions at the top and bottom (interlocks with panel 1). */
+/* Panel 2 : shelves + central bumps top AND bottom (shorter panel,
+             so the notch takes a larger share of its height ≈ 7.5%). */
 .panel-2{
   margin-top:-1px;
   -webkit-clip-path:polygon(
-    0 var(--notch), 24% var(--notch), 26% 0, 74% 0, 76% var(--notch), 100% var(--notch),
-    100% calc(100% - var(--notch)), 76% calc(100% - var(--notch)), 74% 100%,
-    26% 100%, 24% calc(100% - var(--notch)), 0 calc(100% - var(--notch))
+    0 7.5%, 21.3% 7.5%, 26.7% 0, 73.3% 0, 78.7% 7.5%, 100% 7.5%,
+    100% 92.5%, 78.7% 92.5%, 73.3% 100%,
+    26.7% 100%, 21.3% 92.5%, 0 92.5%
   );
           clip-path:polygon(
-    0 var(--notch), 24% var(--notch), 26% 0, 74% 0, 76% var(--notch), 100% var(--notch),
-    100% calc(100% - var(--notch)), 76% calc(100% - var(--notch)), 74% 100%,
-    26% 100%, 24% calc(100% - var(--notch)), 0 calc(100% - var(--notch))
+    0 7.5%, 21.3% 7.5%, 26.7% 0, 73.3% 0, 78.7% 7.5%, 100% 7.5%,
+    100% 92.5%, 78.7% 92.5%, 73.3% 100%,
+    26.7% 100%, 21.3% 92.5%, 0 92.5%
   );
 }
 
@@ -321,7 +321,6 @@ a{text-decoration:none;color:inherit}
   .ways-cta{grid-column:1 / -1}
 }
 @media (max-width:900px){
-  :root{--notch:40px}
   .panel-light{padding:90px 0}
   .nav-links{display:none}
   .eco-grid{grid-template-columns:1fr}
