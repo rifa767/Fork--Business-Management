@@ -4,8 +4,8 @@
 
 ### A modern, animated business-management landing page — built from a Figma design, deployed live.
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-683fea?style=for-the-badge)](https://shahadot16.github.io/Fork-Business-Management/)
-[![GitHub Pages](https://img.shields.io/badge/Deployed_on-GitHub_Pages-222?style=for-the-badge&logo=github)](https://shahadot16.github.io/Fork-Business-Management/)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-683fea?style=for-the-badge)](https://rifa767.github.io/Fork--Business-Management/)
+[![GitHub Pages](https://img.shields.io/badge/Deployed_on-GitHub_Pages-222?style=for-the-badge&logo=github)](https://rifa767.github.io/Fork--Business-Management/)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
@@ -18,7 +18,7 @@
 
 ## 🔗 Live Demo
 
-### 👉 **[https://shahadot16.github.io/Fork-Business-Management/](https://shahadot16.github.io/Fork-Business-Management/)**
+### 👉 **[https://rifa767.github.io/Fork--Business-Management/](https://rifa767.github.io/Fork--Business-Management/)**
 
 Open the link above to view the full, responsive website live in your browser.
 
@@ -103,7 +103,7 @@ Fork-Business-Management/
 
 <div align="center">
 
-### Built with ❤️ by [Md. Shahadot Hossain](https://github.com/Shahadot16)
+### Built with ❤️ by [Rifa Tamanna](https://github.com/rifa767)
 
 ⭐ If you like this project, give it a star!
 
